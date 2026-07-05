@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: raichu08/threetierappbk:v16
+          image: raichu08/threetierappbk:v17
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
