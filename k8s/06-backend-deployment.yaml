@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: three-tier-backend:latest
+          image: raichu08/threetierappbk:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
