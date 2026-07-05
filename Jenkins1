@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    triggers {
+        githubPush()
+        }
+    stages {
+        
+        stage('Deploy to K8 cluster') {
+           steps {
+                script {
+                    echo "Deploying..."
+                    sh """
+                       kubectl apply -f k8s/
+                       kubectl get pods -n three-tier-app -w
+                    """
+                }
+            }
+        }
+
+        
+    }
+        
+    post {
+        success {
+            echo "Deployment Successfull"
+        }
+        failure {
+            echo "Deployment failed"
+        }
+    }
+}
+        
