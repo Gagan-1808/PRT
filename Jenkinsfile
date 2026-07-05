@@ -66,11 +66,10 @@ pipeline {
         success {
             echo "Docker Build, Test and Push completed successfully! Now cleaning up"
             }
-        }
+        
         failure {
             echo "Docker Build, Test and Push failed! Now cleaning up"
             }
         }
     }
-}
         
