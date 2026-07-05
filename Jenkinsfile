@@ -15,7 +15,6 @@ pipeline {
     stages {
 
         stage('Checkout Code') {
-            agent { label 'test' }
             steps {
                 echo "Fetching latest code from GitHub..."
                 checkout scm
