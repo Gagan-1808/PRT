@@ -24,7 +24,6 @@ pipeline {
     
 
         stage('Build Docker Image') {
-           agent { label 'test' }
             steps {
                 script {
                     echo "Building Docker image of frontend..."
