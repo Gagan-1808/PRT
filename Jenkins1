@@ -11,8 +11,8 @@ pipeline {
                 script {
                     echo "Deploying..."
                     sh """
-                       kubectl apply -f k8s/  --context PRT
-                       kubectl get pods -n three-tier-app -w  --context PRT
+                       kubectl apply -f k8s/
+                       kubectl get pods -n three-tier-app -w
                     """
                 }
             }
