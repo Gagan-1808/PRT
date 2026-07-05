@@ -40,7 +40,6 @@ pipeline {
 
 
         stage('Push to Dockerhub and Logout') {
-            agent { label 'test' }
             steps {
                 script {
                     withCredentials([usernamePassword(
